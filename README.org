@@ -15,5 +15,5 @@ your terminal before BACKUP your own configurations.
     (use-package pdf-tools
       :ensure t
       :config (progn
-  (pdf-tools-install))))
+		(pdf-tools-install))))
 #+END_SRC
