@@ -13,7 +13,7 @@ your terminal before BACKUP your own configurations.
   (unless (eq system-type 'darwin)
     ;; MacOS X is not officially supported.
     (use-package pdf-tools
-      :ensure t
+      :ensure
       :config (progn
 		(pdf-tools-install))))
 #+END_SRC
