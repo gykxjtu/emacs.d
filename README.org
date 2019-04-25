@@ -1,0 +1,19 @@
+* My Emacs Configuration
+To use this Emacs configuration, simply run the following command in
+your terminal before BACKUP your own configurations.
+#+BEGIN_SRC shell
+  cd ~ 
+  git clone https://github.com/gykxjtu/emacs.d.git .emacs.d
+#+END_SRC
+** For MacOS X
+   Since =pdf-tools= is not officially supported on MacOS X, you can
+   set comment the following codes in =.emacs.d/elisp/init-config.el=
+   to avoid errors during compiling on your Mac.
+#+BEGIN_SRC emacs-lisp
+  (unless (eq system-type 'darwin)
+    ;; MacOS X is not officially supported.
+    (use-package pdf-tools
+      :ensure t
+      :config (progn
+  (pdf-tools-install))))
+#+END_SRC
