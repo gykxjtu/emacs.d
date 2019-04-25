@@ -84,5 +84,9 @@
 	    (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 	    (global-set-key (kbd "C-c C-a") 'mc/mark-all-like-this)))
 
+(use-package neotree
+  :ensure t
+  :config (global-set-key [f8] 'neotree-toggle))
+
 (provide 'init-config)
 ;;; init-config.el ends here
