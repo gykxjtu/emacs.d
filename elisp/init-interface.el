@@ -6,7 +6,7 @@
 (setq initial-scratch-message ";; Die Luft der Freiheit weht\n\n")
 
 (if (eq system-type 'darwin)
-    (set-frame-font "Monaco-16"))
+    (set-frame-font "Monaco-20"))
 
 (if (eq system-type 'gnu/linux)
     (set-frame-font "DejaVu Sans Mono-16"))
