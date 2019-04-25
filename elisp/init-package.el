@@ -11,8 +11,9 @@
 		    (not (gnutls-available-p))))
        (proto (if no-ssl "http" "https")))
   (setq package-archives nil)
-  (add-to-list 'package-archives (cons "gnu" (concat proto "://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")) t)
+  (add-to-list 'package-archives (cons "gnu"   (concat proto "://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")) t)
   (add-to-list 'package-archives (cons "melpa" (concat proto "://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")) t)
+  (add-to-list 'package-archives (cons "org"   (concat proto "://mirrors.tuna.tsinghua.edu.cn/elpa/org/")) t)
   )
 (package-initialize)
 

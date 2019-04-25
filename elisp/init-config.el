@@ -64,8 +64,10 @@
 
 (use-package yasnippet
   :ensure t
-  :init (progn
-	  (yas-global-mode 1)))
+  :config (progn
+	    (yas-global-mode t)
+	    (use-package yasnippet-snippets
+	      :ensure t)))
 
 (use-package beacon
   :ensure t
