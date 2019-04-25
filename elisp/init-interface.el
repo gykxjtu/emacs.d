@@ -17,9 +17,7 @@
 
 (use-package smart-mode-line-powerline-theme
   :ensure t
-  :config (progn
-	    (sml/setup)
-	    ))
+  :config (sml/setup))
 
 (provide 'init-interface)
 ;;; init-interface.el ends here

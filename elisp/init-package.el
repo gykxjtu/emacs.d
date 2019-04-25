@@ -17,7 +17,7 @@
   )
 (package-initialize)
 
-(defun require-package (package)
+(defun require-package (package &optional archive)
   "Initialize PACKAGE in ARCHIVE before using it."
   (unless (package-installed-p package)
     (unless (assoc package package-archive-contents)
