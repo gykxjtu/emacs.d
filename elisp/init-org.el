@@ -4,8 +4,7 @@
 
 ;;; Code:
 (add-hook 'org-mode-hook (lambda ()
-			   (linum-mode t)
-			   (yas-minor-mode t)))
+			   (linum-mode t)))
 
 (use-package org
   :ensure t)
