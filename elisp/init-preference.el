@@ -5,8 +5,6 @@
 ;;; Code:
 (tool-bar-mode 0)
 
-(menu-bar-mode 0)
-
 (scroll-bar-mode 0)
 
 (electric-pair-mode t)
@@ -20,6 +18,10 @@
 (setq inhibit-startup-message t)
 
 (defalias 'list-buffers 'ibuffer)
+
+(if (eq system-type 'darwin)
+    (menu-bar-mode t)
+  (menu-bar-mode 0))
 
 (provide 'init-preference)
 ;;; init-preference.el ends here
