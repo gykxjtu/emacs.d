@@ -7,19 +7,16 @@
     (setenv "PATH" (concat (getenv "PATH") ":" "/Library/TeX/texbin/"))
   nil)
 
-(add-hook 'pdf-view-mode-hook (lambda ()
-				(auto-revert-mode t)))
-
 (unless (eq system-type 'darwin)
   ;; MacOS X is not officially supported.
+  (progn
   (use-package pdf-tools
     :ensure t
-    :config (progn
-	      (pdf-tools-install)))
-  )
-
-(use-package org-pdfview
-  :ensure t)
+    :config (pdf-tools-install))
+  (use-package org-pdfview
+    :ensure t
+    :config (add-hook 'pdf-view-mode-hook (lambda ()
+					    (auto-revert-mode t))))))
 
 (provide 'init-tex)
 ;;; init-tex.el ends here

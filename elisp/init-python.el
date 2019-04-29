@@ -5,9 +5,6 @@
 ;;; etc.
 
 ;;; Code:
-(use-package elpy
-  :ensure t
-  :init (elpy-enable))
 
 (provide 'init-python)
 ;;; init-python.el ends here
