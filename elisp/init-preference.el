@@ -11,9 +11,9 @@
 
 (global-hl-line-mode t)
 
-(setq make-backup-files nil)
+(setq make-backup-files t)
 
-(setq auto-save-default nil)
+(setq auto-save-default t)
 
 (setq inhibit-startup-message t)
 
