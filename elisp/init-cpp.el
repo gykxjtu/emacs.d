@@ -10,15 +10,6 @@
 			   (flycheck-mode t)
 			   ))
 
-(use-package auto-complete-clang-async
-  :ensure t
-  :config (progn
-	    (setq ac-clang-complete-executable "~/.emacs.d/clang-complete")
-	    (setq ac-source '(ac-source-clang-async))
-	    (ac-clang-launch-completion-process)
-	    (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
-	    (add-hook 'auto-complete-mode-hook 'ac-cc-mode-setup)))
-
 (provide 'init-cpp)
 ;;; init-cpp.el ends here
 

@@ -4,7 +4,7 @@
 
 ;;; Code:
 (if (eq system-type 'darwin)
-    (setenv "PATH" (concat (getenv "PATH") ":" "/Library/TeX/texbin/"))
+    (setenv "PATH" (concat (getenv "PATH") ":" "/usr/local/bin"))
   nil)
 
 (unless (eq system-type 'darwin)

@@ -1,3 +1,4 @@
+#+STARTUP: showall
 * My Emacs Configuration
 To use this Emacs configuration, simply run the following command in
 your terminal before BACKUP your own configurations.
@@ -17,3 +18,17 @@ your terminal before BACKUP your own configurations.
       :config (progn
 		(pdf-tools-install))))
 #+END_SRC
+** About TeX
+   Since you have to manually add
+   #+BEGIN_SRC emacs-lisp
+     (setenv "PATH" (concat (getenv "PATH") ":" "/usr/local/bin"))
+   #+END_SRC
+   to your configuration file on your MacOS, make sure =latex= binary
+   is located at =/usr/local/bin=, which is MacTeX's default option. If
+   you install =TeXLive= with terminal, simply modify the string
+   parameter to match your =latex= binary location.
+** About =auto-complete-clang= and auto-complete-clang-async
+   =ACC= is a very nice package to help you with completion while
+   coding. However, it may sometimes be less "smooth" than =ACCA=
+   which calls a 3rd party process as server while completion. ACCA
+   can now only be compiled on Linux (eg. Manjaro).
