@@ -13,7 +13,7 @@
   (use-package pdf-tools
     :ensure t
     :config (pdf-tools-install))
-  (use-package org-pdfview
+  (use-package org-pdftools
     :ensure t
     :config (add-hook 'pdf-view-mode-hook (lambda ()
 					    (auto-revert-mode t))))))
